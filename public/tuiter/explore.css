@@ -1,0 +1,80 @@
+.wd-body {
+    background-color: black;
+}
+
+.wd-search-tuiter-box {
+    color : white;
+    background-color: darkgray;
+    width: 90%;
+    height: 25px;
+    border-radius: 40px;
+    border-color: rgb(47, 51, 54);
+    margin-left: 12px;
+    margin-top: 12px;
+
+}
+.fa-gear {
+    font-size: 40px;
+    color: lightskyblue;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-top: 1.5%;
+    float:right;
+    font-weight:lighter;
+
+}
+
+input[type="text"]::placeholder {
+   padding-left: 50px;
+}
+
+.wd-search-parent {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-right: 12px;
+}
+
+.wd-search-parent .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    color: gray;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.wd-tabs {
+    color: whitesmoke;
+    display: block;
+    margin-left: 15px;
+}
+
+.wd-top-bar {
+    display: block;
+}
+
+.wd-tabs-list-item {
+    padding: 16px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 118, 125);
+}
+
+.wd-tabs-list-item-select {
+    padding: 16px;
+    font-size: 15px;
+    color: rgb(29,161,242);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    border-bottom: 4px solid;
+    margin-bottom: 10px;
+    border-color: rgb(29,161,242);
+}
+
+.wd-hor-line {
+    color: rgb(47, 51, 54);
+    padding-top: 9px;
+    border-color: rgb(47, 51, 54);
+    border-width: 3px;
+}
