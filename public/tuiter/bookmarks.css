@@ -10,10 +10,16 @@
     font-size: 20px;
 }
 
-.fa-ellipsis {
+.fa-ellipsis-blue {
     color: rgb(29,161,242);
     float: right;
     margin-top: -40px;
+}
+
+.fa-ellipsis-grey {
+    color: darkgray;
+    float: right;
+    margin-top: 18px;
 }
 
 .fa-tuit-ellipsis {
@@ -34,11 +40,6 @@
 
 .wd-body{
     background-color: black;
-}
-
-.wd-pagecontainer{
-    height: 100%;
-    width: 100%;
 }
 
 .wd-headercontainer {
@@ -72,6 +73,7 @@
 
 .wd-avatarcontainer {
     width: fit-content;
+    display: inline;
 }
 
 .wd-contentcontainer {
@@ -113,12 +115,12 @@
 .wd-imagecontainer {
     height: 264px;
     width: 504px;
+    margin-left: 12px;
     border: 1px solid lightgray;
     border-radius: 10px;
-    margin-left: 12px;
 }
 
-.wd-image {
+.wd-bookmark-image {
     height: 264px;
     width: 504px;
     border-top-left-radius: 10px;
@@ -127,6 +129,7 @@
 
 .wd-imagecontent {
     padding: 12px;
+    margin-top: -5px;
 }
 
 .wd-imagecontentheader {
@@ -135,7 +138,7 @@
     font-size: 15px;
     padding: 12px;
     margin-left: -15px;
-    margin-top: 12px;
+    margin-top: -5px;
 }
 
 .wd-imagecontentbody {
@@ -149,7 +152,7 @@
 .wd-iconscontainer {
     display: flex;
     flex-direction: row;
-    margin-top: 12px;
+    margin-top: 160px;
     width: 504px;
     margin-bottom: 10px;
 }
@@ -178,4 +181,16 @@
 
 .wd-icondiv-anchor {
     text-decoration: none;
+}
+
+.wd-content-parent {
+    border:1px solid grey;
+}
+.fa-link  {
+    color: grey;
+}
+
+.wd-imagecontainer-parent {
+    border-width: 1px;
+    border-color: grey;
 }
