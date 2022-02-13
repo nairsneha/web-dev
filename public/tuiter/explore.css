@@ -5,7 +5,6 @@
 .wd-search-tuiter-box {
     color : white;
     background-color: darkgray;
-    width: 90%;
     height: 25px;
     border-radius: 40px;
     border-color: rgb(47, 51, 54);
@@ -25,7 +24,7 @@
 }
 
 input[type="text"]::placeholder {
-   padding-left: 50px;
+    padding-left: 50px;
 }
 
 .wd-search-parent {
@@ -79,7 +78,7 @@ input[type="text"]::placeholder {
     border-width: 3px;
 }
 
-.tuit {
+.wd-tuit {
     margin-left: 12px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -109,6 +108,7 @@ input[type="text"]::placeholder {
     font-size: 15px;
     display: block;
     padding: 2px;
+    padding-top: 5px;
 }
 
 .wd-tuit-footer {
@@ -121,10 +121,6 @@ input[type="text"]::placeholder {
 .wd-hor-line-thin {
     border-width: 1px;
     border-color: rgb(47, 51, 54);
-}
-
-.wd-tuit-with-image-post {
-
 }
 
 .wd-tuit-text-with-image-post {
@@ -161,4 +157,31 @@ input[type="text"]::placeholder {
 
 .wd-tuit-image {
     float: right;
+}
+.wd-tuit-text {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-top-hr {
+    margin-top: 19px;
+    size:5px;
+    background-color: gray;
+}
+
+.wd-tuit-main-div {
+    float: left;
+}
+
+.wd-tuit-main-div-image {
+    float: right;
+}
+
+.wd-end-tuit {
+    clear: left;
+}
+
+.fa-arrow-left {
+    text-decoration: none;
+    color: dodgerblue;
 }
