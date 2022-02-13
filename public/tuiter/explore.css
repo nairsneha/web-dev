@@ -74,7 +74,91 @@ input[type="text"]::placeholder {
 
 .wd-hor-line {
     color: rgb(47, 51, 54);
-    padding-top: 9px;
+    padding-top: 8.5px;
     border-color: rgb(47, 51, 54);
     border-width: 3px;
+}
+
+.tuit {
+    margin-left: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-tuit-without-image {
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+}
+
+.fa-ellipsis-h {
+    font-size: 40px;
+    color: grey;
+    text-decoration: none;
+    margin-left: 12px;
+    float:right;
+    display: inline;
+}
+
+.wd-tuit-menu {
+    display: inline;
+    float: right;
+    margin-left: 24px;
+}
+
+.wd-tuit-title {
+    color: whitesmoke;
+    font-size: 15px;
+    display: block;
+    padding: 2px;
+}
+
+.wd-tuit-footer {
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+    display: block;
+    padding: 2px;
+}
+
+.wd-hor-line-thin {
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-tuit-with-image-post {
+
+}
+
+.wd-tuit-text-with-image-post {
+    color: whitesmoke;
+    font-size: 13px;
+    display: block;
+    padding: 2px;
+}
+
+.wd-tuit-icon {
+    height: 12px;
+    width: 12px;
+}
+
+.wd-tuit-yesterday {
+    color: grey;
+}
+
+.wd-tuit-image {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+
+.wd-tuit-with-image-post-text {
+    display: inline;
+}
+
+.wd-tuit-with-image-post {
+    margin-left: 12px;
+}
+
+.wd-tuit-image {
+    float: right;
 }
