@@ -1,5 +1,6 @@
 .wd-body {
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .wd-search-tuiter-box {
@@ -88,15 +89,6 @@ input[type="text"]::placeholder {
     font-size: 13px;
 }
 
-.fa-ellipsis-h {
-    font-size: 40px;
-    color: grey;
-    text-decoration: none;
-    margin-left: 12px;
-    float:right;
-    display: inline;
-}
-
 .wd-tuit-menu {
     display: inline;
     float: right;
@@ -131,8 +123,9 @@ input[type="text"]::placeholder {
 }
 
 .wd-tuit-icon {
-    height: 12px;
-    width: 12px;
+    height: 13.5px;
+    width: 13.5px;
+    border-radius: 12px;
 }
 
 .wd-tuit-yesterday {
@@ -145,6 +138,7 @@ input[type="text"]::placeholder {
     display: inline;
     border-radius: 20px;
     margin-right: 16px;
+    float: right;
 }
 
 .wd-tuit-with-image-post-text {
@@ -155,9 +149,6 @@ input[type="text"]::placeholder {
     margin-left: 12px;
 }
 
-.wd-tuit-image {
-    float: right;
-}
 .wd-tuit-text {
     font-size: 13px;
     color: rgb(110, 118, 125);

@@ -1,0 +1,181 @@
+.wd-body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-bookmark-header {
+    margin-top: 12px;
+    margin-left: 16px;
+    font-size: 20px;
+}
+
+.fa-ellipsis {
+    color: rgb(29,161,242);
+    float: right;
+    margin-top: -40px;
+}
+
+.fa-tuit-ellipsis {
+    color: grey;
+
+}
+.wd-bookmark-handle {
+    font-size: 13px;
+    color: darkgray;
+    margin-left: 16px;
+    margin-bottom: 12px;
+    margin-top: -6px;
+}
+.wd-hor-line-thin {
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-body{
+    background-color: black;
+}
+
+.wd-pagecontainer{
+    height: 100%;
+    width: 100%;
+}
+
+.wd-headercontainer {
+    padding-left: 16px;
+    padding-top: 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.wd-header {
+    height: fit-content;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+.wd-postcontainer {
+    padding-left: 16px;
+    padding-top: 12px;
+}
+
+.wd-avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+}
+
+.wd-post {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-avatarcontainer {
+    width: fit-content;
+}
+
+.wd-contentcontainer {
+    height: fit-content;
+    width: 100%;
+    margin-left: 12px;
+}
+
+.wd-authorcontainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.wd-authorname {
+    margin-left: 12px;
+    margin-top: 12px;
+    color: white;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.wd-authorhandle {
+    margin-left: 12px;
+    margin-top: 12px;
+    font-size: 15px;
+    color: darkgray;
+}
+
+.wd-postcontent {
+    font-size: 15px;
+    color: white;
+    width: 506px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 16px;
+}
+
+.wd-imagecontainer {
+    height: 264px;
+    width: 504px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-left: 12px;
+}
+
+.wd-image {
+    height: 264px;
+    width: 504px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.wd-imagecontent {
+    padding: 12px;
+}
+
+.wd-imagecontentheader {
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+    margin-left: -15px;
+    margin-top: 12px;
+}
+
+.wd-imagecontentbody {
+    width: 100%;
+    color: darkgray;
+    font-size: 15px;
+    padding: 12px;
+    margin-left: -15px;
+}
+
+.wd-iconscontainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    width: 504px;
+    margin-bottom: 10px;
+}
+
+.wd-individualiconcontainer {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 15px;
+}
+
+.wd-likescontainer {
+    color: red;
+}
+
+.wd-icondiv {
+    display: flex;
+    width: calc(100%/4);
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.wd-icons {
+    margin-right: 5px;
+}
+
+.wd-icondiv-anchor {
+    text-decoration: none;
+}
