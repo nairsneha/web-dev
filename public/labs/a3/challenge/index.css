@@ -276,3 +276,20 @@
     }
 }
 
+.keyframe-div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {background-color:dodgerblue; left:0px; top:0px;}
+    25%  {background-color:lightskyblue; left:200px; top:0px;}
+    50%  {background-color:cadetblue; left:200px; top:200px;}
+    75%  {background-color:cornflowerblue; left:0px; top:200px;}
+    100% {background-color:deepskyblue; left:0px; top:0px;}
+}
