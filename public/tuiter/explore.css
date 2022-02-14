@@ -169,7 +169,7 @@ input[type="text"]::placeholder {
     float: right;
 }
 
-.wd-end-tuit {
+.wd-clear-float {
     clear: left;
 }
 
