@@ -2,12 +2,14 @@
     background-color: black;
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 .wd-bookmark-header {
     margin-top: 12px;
     margin-left: 16px;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .fa-ellipsis-blue {
@@ -110,6 +112,7 @@
     margin-bottom: 12px;
     margin-left: 12px;
     margin-right: 16px;
+    margin-top: 12px;
 }
 
 .wd-imagecontainer {
@@ -152,7 +155,7 @@
 .wd-iconscontainer {
     display: flex;
     flex-direction: row;
-    margin-top: 160px;
+    margin-top: -8px;
     width: 504px;
     margin-bottom: 10px;
 }
@@ -160,8 +163,7 @@
 .wd-individualiconcontainer {
     display: flex;
     flex-direction: row;
-    color: white;
-    font-size: 15px;
+    color: darkgray;
 }
 
 .wd-likescontainer {
@@ -188,9 +190,71 @@
 }
 .fa-link  {
     color: grey;
+    padding-bottom: 12px;
 }
 
 .wd-imagecontainer-parent {
     border-width: 1px;
     border-color: grey;
+}
+.wd-image-title {
+    padding-top: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.wd-image-content{
+    padding: 12px;
+    color: darkgray;
+    margin: 0px;
+}
+
+.wd-rounded-bookmark {
+    border-radius: 10px;
+    width: 504px;
+    border: 2px solid grey;
+    height: auto;
+
+}
+
+.wd-shift-right{
+    float: right;
+}
+
+.wd-bookmark-author {
+    margin-left: 12px;
+    font-weight: bold;
+}
+
+.wd-bookmark-author-handle {
+    color: darkgray;
+}
+
+.wd-post-content {
+    padding-top: 12px;
+}
+
+.wd-clear-float {
+    clear: left;
+}
+
+.wd-ellipses-parent {
+    float: right;
+    padding-left: 12px;
+}
+
+.wd-bookmark-author-parent {
+    float: left;
+}
+
+.wd-bookmark-footer-link {
+    color: darkgray;
+}
+
+.wd-bookmark-footer {
+    padding-left: 12px;
+}
+
+.fa-arrow-left {
+    text-decoration: none;
+    color: dodgerblue;
 }
