@@ -318,6 +318,7 @@ input[type="text"]::placeholder {
 .wd-right-panel-card-follow-btn {
     border-radius: 20px !important;
     margin-top: 5px;
+    float: right;
 }
 
 .wd-right-panel-normal-card {
@@ -350,39 +351,18 @@ input[type="text"]::placeholder {
     position: absolute;
     bottom: 8px;
     left: 16px;
-    font-size: 50px;
+    font-size: 40px;
+    float: left;
 }
 
 .wd-grey-color {
     color: grey;
 }
 
-
-
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-
+.card {
+    border-radius: 0 !important;
 }
 
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-    .wd-hide-div-for-lg-sc{
-        display:none;
-    }
-
-}
-
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-
-}
-
-/* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {
-
+.wd-for-you-sub-tuit-img{
+    width:80px;
 }
