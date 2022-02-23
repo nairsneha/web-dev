@@ -362,12 +362,21 @@ input[type="text"]::placeholder {
     border-radius: 0 !important;
 }
 
+.card-body{
+
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-right: 0 !important;
+}
+
 .wd-for-you-sub-tuit-img{
     width:80px;
+    border-radius: 12px;
 }
 
 .wd-nav-horizontan-bar{
-    border-top: 8px solid;
+    border-top: 3px solid;
     border-radius: 8px;
 }
 
@@ -375,11 +384,36 @@ input[type="text"]::placeholder {
     background-color: black !important;
 }
 
+.wd-right-pannel-card{
+    height: 80px !important;
+    width: 90% !important;
+
+}
+
 .wd-who-to-follow-card{
     height: 40px !important;
+    width: 90% !important;
 }
-.wd-right-pannel-card{
-    height: 70px !important;
-    width: 70% !important;
-    border-radius: 20% !important;
+.wd-rounded-cornor-card{
+    border-radius: 6% !important;
+    margin-top: 8px !important;
+}
+
+.wd-right-pannel-bg-color{
+    background-color: rgb(31,34,36) !important;
+}
+.wd-center-pannel-bordor-color{
+    border-color: rgb(31,34,36) !important;
+}
+
+.wd-center-panel {
+    margin-top: 8px !important;
+}
+
+.col-12 {
+    padding-bottom: 5px;
+}
+
+.nav-item {
+
 }
