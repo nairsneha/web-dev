@@ -376,3 +376,7 @@ input[type="text"]::placeholder {
     height: 40px !important;
     width: 90% !important;
 }
+
+.wd-right-float {
+    float: right;
+}

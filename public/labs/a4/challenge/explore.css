@@ -371,8 +371,15 @@ input[type="text"]::placeholder {
     padding-right: 0 !important;
 }
 
-.wd-for-you-sub-tuit-img{
-    width:80px;
+.wd-for-you-sub-tuit-img-small-screen{
+    width:60px !important;
+    float: right !important;
+    border-radius: 12px;
+}
+
+.wd-for-you-sub-tuit-img-large-screen{
+    width:80px !important;
+    float: right !important;
     border-radius: 12px;
 }
 
@@ -387,7 +394,7 @@ input[type="text"]::placeholder {
 
 .wd-right-pannel-card{
     height: 80px !important;
-    width: 90% !important;
+    width: 85% !important;
 
 }
 
@@ -398,6 +405,7 @@ input[type="text"]::placeholder {
 .wd-rounded-cornor-card{
     border-radius: 6% !important;
     margin-top: 8px !important;
+    width: 90%;
 }
 
 .wd-right-pannel-bg-color{
