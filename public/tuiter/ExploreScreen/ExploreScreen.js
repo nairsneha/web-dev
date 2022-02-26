@@ -13,10 +13,10 @@ import ExploreComponent from "./ExploreComponent.js";
         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2 pr-0 mt-2">
             ${NavigationSidebar()}
         </div>
-        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-10 col-xs-10 col-10 ml-0 pl-4 pr-4">
+        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-10 col-xs-10 col-10 ml-0 pl-4 pr-4 mb-4 rounded">
             ${ExploreComponent()}
         </div>
-        <div class="col-xl-3 col-lg-3 pr-4 mt-2 d-none d-lg-block">
+        <div class="col-xl-3 col-lg-3 pr-4 mb-2 mt-2 d-none d-lg-block">
             ${WhoToFollowList()}
       </div>
 </div>

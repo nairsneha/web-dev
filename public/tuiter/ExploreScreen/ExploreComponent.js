@@ -6,7 +6,7 @@ const ExploreComponent = () => {
                 <div class="col-11 rounded-pill bg-white h-75 mt-2 mb-2">
                
                 <i class="fa fa-search position-absolute float-left pt-2 pl-1 mt-1"></i>
-                <input class="pl-4 mb-2 mt-2 border-0 w-100" type="text" placeholder="Search Tuiter">
+                <input class="pl-4 mb-2 mt-2 border-0 w-100" style="box-shadow: none; outline: none" type="text" placeholder="Search Tuiter">
                 
                 </div>
                 
