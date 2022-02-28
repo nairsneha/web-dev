@@ -16,7 +16,7 @@ const NavigationSidebar = (active) => {
                       <i class="fab fa-twitter text-white"></i></a>
 
 
-                <a class="list-group-item text-decoration-none" href="../HomeScreen">
+                <a class="list-group-item text-decoration-none" href="../HomeScreen/index.html">
                       <i class="fa-solid fa-home text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Home</span></a>
                   
                     <a class="list-group-item text-decoration-none" href="../ExploreScreen/explore.html">
