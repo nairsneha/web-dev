@@ -11,7 +11,7 @@ const ExploreComponent = () => {
                 </div>
                 
                 <div class="col-1 pl-2">
-                <a class="fa fa-gear fa-lg text-secondary float-right mt-4" href="explore-settings.html"></a>
+                <a class="fa fa-gear fa-lg text-decoration-none float-right mt-4" href="explore-settings.html"></a>
                 </div>
             </div>
        

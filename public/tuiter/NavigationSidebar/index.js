@@ -1,36 +1,47 @@
 
-const NavigationSidebar = () => {
+const NavigationSidebar = (active) => {
+
+    $(document).ready(function () {
+        if (active === 'Home')
+            $("a:nth-child(2)").addClass("active");
+
+        if (active === 'Explore')
+            $("a:nth-child(3)").addClass("active");
+    });
+
     return(`
             <div class="list-group">
             
-                <a class="list-group-item bg-dark text-decoration-none" href="">
+                <a class="list-group-item text-decoration-none" href="">
                       <i class="fab fa-twitter text-white"></i></a>
 
 
-                <a class="list-group-item bg-dark text-decoration-none" href="#">
+                <a class="list-group-item text-decoration-none" href="../HomeScreen">
                       <i class="fa-solid fa-home text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Home</span></a>
-                        
+                  
+                    <a class="list-group-item text-decoration-none" href="../ExploreScreen/explore.html">
+                      <i class="fa-solid fa-hashtag text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Explore</span></a>      
             
-                <a class="list-group-item bg-dark text-decoration-none" href="#">
+                <a class="list-group-item text-decoration-none" href="#">
                       <i class="fa-solid fa-bell text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Notifications</span></a>
                       
                       
-                <a class="list-group-item bg-dark text-decoration-none" href="#">
+                <a class="list-group-item text-decoration-none" href="#">
                       <i class="fa-solid fa-message text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Messages</span></a>
                       
                       
-                <a class="list-group-item bg-dark text-decoration-none" href="#">
+                <a class="list-group-item text-decoration-none" href="#">
                       <i class="fa-solid fa-bookmark text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Bookmarks</span></a>
                       
                       
-                <a class="list-group-item bg-dark text-decoration-none" href="#">
+                <a class="list-group-item text-decoration-none" href="#">
                       <i class="fa-solid fa-list text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Lists</span></a>
                       
-                       <a class="list-group-item bg-dark text-decoration-none" href="#">
+                       <a class="list-group-item text-decoration-none" href="#">
                       <i class="fa-solid fa-user text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">Profile</span></a>
                       
                       
-                       <a class="list-group-item bg-dark text-decoration-none" href="#">
+                       <a class="list-group-item text-decoration-none" href="#">
                       <i class="fa-solid fa-comment-dots text-white"></i>&nbsp;&nbsp;<span class="text-white d-none d-lg-inline d-print-block">More</span></a>
             </div>
             <div class="d-grid mt-2">

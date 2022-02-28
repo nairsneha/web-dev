@@ -1,7 +1,7 @@
 const PostSummaryItem = (post) => {
     return(`
 
-            <div class="card bg-dark rounded-0">
+            <div class="card rounded-0">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-10">
