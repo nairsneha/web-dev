@@ -9,7 +9,7 @@ export default [ {
         "name": "Grimes",    "userName": "grimes",    "time": "2h",
         "imageIcon": "https://cdn-images-1.medium.com/max/1200/1*QUlYX1snC5csKT-E6Bmxvw.jpeg",
         "image": "https://nypost.com/wp-content/uploads/sites/2/2021/10/grimes-05.jpg?quality=90&strip=all",
-        "title": "Amazing show about <a href='www.wikipedia.com'>@Inspiration4x</a>  mission!", "imageCaption" : "Countdown: Inspiration4 Mission to Space | Netflix Official Site", "postInfo": "From training to launch to landing, this all access docuseries rides along with crew on first orbital space",
+        "title": "Grimes seen reading Karl Marx ollowing split with world's richest man Elon Musk <a href='www.wikipedia.com'>trib.al</a>", "imageCaption" : "Countdown: Inspiration4 Mission to Space | Netflix Official Site", "postInfo": "From training to launch to landing, this all access docuseries rides along with crew on first orbital space",
         "postLink" : "netflix.com", "postComments" : "4.2k", "postRetuits" : "3.5k", "postLikes": "37.5k"
     },
 ]

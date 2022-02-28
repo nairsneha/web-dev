@@ -13,7 +13,7 @@ const PostItem = (post) => {
 
                         </div>
                         <div class="col-9">
-                            <h6 class="text-white">${post.name}  <i class="fa-solid fa-circle-check text-white"></i> <span class="text-secondary">&nbsp; @${post.userName}</span><span class="text-secondary"> - ${post.time}</span></h6>
+                            <h6 class="text-white">${post.name}  <i class="fa-solid fa-circle-check text-white"></i> <span class="text-secondary">&nbsp; @${post.userName}</span><span class="text-secondary"> &middot; ${post.time}</span></h6>
   
                            <div class="text-white pr-4">${post.title}</div>
                         </div>
