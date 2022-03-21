@@ -4,7 +4,7 @@ import './vendors/fontawesome/css/font-awesome.min.css';
 import HelloWorld from "./components/hello-world";
 import Labs from "./components/labs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import HomeScreen from "./components/tuiter/HomeScreen/HomeScreen";
+import Index from "./components/tuiter/HomeScreen";
 import ExploreScreen from "./components/tuiter/ExploreScreen/ExploreScreen";
 
 function App() {
@@ -20,10 +20,10 @@ function App() {
                            element={<Labs/>}/>
                     <Route path="/tuiter"
                            exact={true}
-                           element={<HomeScreen/>}/>
+                           element={<Index/>}/>
                     <Route path="/tuiter/home"
                            exact={true}
-                           element={<HomeScreen/>}/>
+                           element={<Index/>}/>
                     <Route path="/tuiter/explore"
                            exact={true}
                            element={<ExploreScreen/>}/>

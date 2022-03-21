@@ -4,7 +4,7 @@ import NavigationSidebar from "./NavigationSidebar";
 import WhoToFollowListItem from "./WhoToFollowList/WhoToFollowListItem";
 //import ExploreComponent from "./ExploreScreen/ExploreComponent";
 import ExploreScreen from "./ExploreScreen/ExploreScreen";
-import HomeScreen from "./HomeScreen/HomeScreen";
+import Index from "./HomeScreen";
 const Tuiter = () => {
     return(
         <>

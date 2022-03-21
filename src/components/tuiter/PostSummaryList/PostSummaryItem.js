@@ -45,9 +45,4 @@ const PostSummaryItem = (props) => {
 
 }
 
-/*
-
-
-
- */
 export default PostSummaryItem;

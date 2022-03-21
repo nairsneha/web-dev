@@ -3,8 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCircle} from "@fortawesome/free-solid-svg-icons";
 
 const WhoToFollowListItem = (props)  => {
+    const whoToFollowStyle = {
+        backgroundColor: '#222222'
+    }
+
     return( <>
-            <div className="row pl-2 pt-2 pb-2 p4-4" >
+            <div className="row pl-2 pt-2 pb-2 p4-4" style={whoToFollowStyle} >
 
                         <div className="col-2 pl-1 pr-0">
                             <img className="w-100 h-80 rounded-circle" src={props.who.avatarIcon}/>

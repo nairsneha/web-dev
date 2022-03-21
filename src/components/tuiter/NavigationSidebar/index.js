@@ -18,14 +18,6 @@ const NavigationSidebar = (
         active = 'explore'
     }) => {
 
-    // (document).ready(function () {
-    //     if (active === 'Home')
-    //         ("a:nth-child(2)").addClass("active");
-    //
-    //     if (active === 'Explore')
-    //         ("a:nth-child(3)").addClass("active");
-    // });
-
     return(<>
         <div className="list-group">
 
