@@ -13,25 +13,27 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
-const NavigationSidebar = (
-    {
-        active = 'explore'
-    }) => {
+const NavigationSidebar = (props) => {
+    const activeColor = {
+        backgroundColor: '#4D9ED1'
+    }
+    const inactiveColor = {
+        backgroundColor: '#222222'
+    }
 
     return(<>
         <div className="list-group">
 
             <Link to="/" className="list-group-item text-decoration-none">
-                {/*<FontAwesomeIcon icon={faKiwiBird} />*/}
                 <i className={"fab fa-twitter"}/>
             </Link>
 
-            <Link to="/tuiter/home" className="list-group-item text-decoration-none">
+            <Link to="/tuiter/home" className="list-group-item text-decoration-none" style={props.active === "Home" ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faHome} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Home</span></Link>
 
-            <Link to="/tuiter/explore" className="list-group-item text-decoration-none">
+            <Link to="/tuiter/explore" className="list-group-item text-decoration-none" style={props.active === "Explore" ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faHashtag} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Explore</span></Link>
@@ -41,18 +43,15 @@ const NavigationSidebar = (
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Notifications</span></a>
 
-
             <a className="list-group-item text-decoration-none" href="#">
                 <FontAwesomeIcon icon={faMessage} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Messages</span></a>
 
-
             <a className="list-group-item text-decoration-none" href="#">
                 <FontAwesomeIcon icon={faBookmark} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Bookmarks</span></a>
-
 
             <a className="list-group-item text-decoration-none" href="#">
                 <FontAwesomeIcon icon={faList} />
@@ -64,14 +63,14 @@ const NavigationSidebar = (
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Profile</span></a>
 
-
             <a className="list-group-item text-decoration-none" href="#">
                 <FontAwesomeIcon icon={faCommentDots} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">More</span></a>
         </div>
+
             <div className="d-grid mt-2">
-                <a href="../tuit.html"
+                <a href="#"
                    className="btn btn-primary btn-block rounded-pill">
                     Tuit</a>
             </div>
