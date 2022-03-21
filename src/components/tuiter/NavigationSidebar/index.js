@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import {
     faBell,
     faBookmark, faCommentDots,
@@ -9,6 +8,7 @@ import {
     faList,
     faMessage, faUser
 } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 const NavigationSidebar = (
     {
@@ -26,21 +26,19 @@ const NavigationSidebar = (
     return(<>
         <div className="list-group">
 
-            <a className="list-group-item text-decoration-none" href="">
+            <Link to="/" className="list-group-item text-decoration-none">
                 <FontAwesomeIcon icon={faKiwiBird} />
-              </a>
+            </Link>
 
-
-            <a className="list-group-item text-decoration-none" href="../HomeScreen/index.html">
+            <Link to="/tuiter/home" className="list-group-item text-decoration-none">
                 <FontAwesomeIcon icon={faHome} />
                 &nbsp;&nbsp;<span
-                className="text-white d-none d-lg-inline d-print-block">Home</span></a>
+                className="text-white d-none d-lg-inline d-print-block">Home</span></Link>
 
-            <a className="list-group-item text-decoration-none"
-               href="../ExploreScreen/explore.html">
+            <Link to="/tuiter/explore" className="list-group-item text-decoration-none">
                 <FontAwesomeIcon icon={faHashtag} />
                 &nbsp;&nbsp;<span
-                className="text-white d-none d-lg-inline d-print-block">Explore</span></a>
+                className="text-white d-none d-lg-inline d-print-block">Explore</span></Link>
 
             <a className="list-group-item text-decoration-none" href="#">
                 <FontAwesomeIcon icon={faBell} />

@@ -4,6 +4,7 @@ import NavigationSidebar from "./NavigationSidebar";
 import WhoToFollowListItem from "./WhoToFollowList/WhoToFollowListItem";
 //import ExploreComponent from "./ExploreScreen/ExploreComponent";
 import ExploreScreen from "./ExploreScreen/ExploreScreen";
+import HomeScreen from "./HomeScreen/HomeScreen";
 const Tuiter = () => {
     return(
         <>
@@ -36,10 +37,17 @@ const Tuiter = () => {
             {/*    </div>*/}
             {/*</div>*/}
 
-            <ExploreScreen />
+            {/*<BrowserRouter>
+                <div className="container">
+                    <Routes>
+
+                    </Routes>
+                </div>
+            </BrowserRouter>*/}
         </>
 
     )
 };
+
 
 export default Tuiter;

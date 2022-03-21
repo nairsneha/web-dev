@@ -5,6 +5,8 @@ import HelloWorld from "./components/hello-world";
 import Labs from "./components/labs";
 import Tuiter from "./components/tuiter";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import HomeScreen from "./components/tuiter/HomeScreen/HomeScreen";
+import ExploreScreen from "./components/tuiter/ExploreScreen/ExploreScreen";
 
 function App() {
     return (
@@ -19,7 +21,13 @@ function App() {
                            element={<Labs/>}/>
                     <Route path="/tuiter"
                            exact={true}
-                           element={<Tuiter/>}/>
+                           element={<HomeScreen/>}/>
+                    <Route path="/tuiter/home"
+                           exact={true}
+                           element={<HomeScreen/>}/>
+                    <Route path="/tuiter/explore"
+                           exact={true}
+                           element={<ExploreScreen/>}/>
                 </Routes>
             </div>
         </BrowserRouter>
