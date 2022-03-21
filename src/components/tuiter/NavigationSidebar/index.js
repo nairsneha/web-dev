@@ -1,5 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../../../vendors/fontawesome/css/font-awesome.min.css';
+import '../../../vendors/fontawesome/css/all.min.css';
+
 import {
     faBell,
     faBookmark, faCommentDots,
@@ -27,7 +30,8 @@ const NavigationSidebar = (
         <div className="list-group">
 
             <Link to="/" className="list-group-item text-decoration-none">
-                <FontAwesomeIcon icon={faKiwiBird} />
+                {/*<FontAwesomeIcon icon={faKiwiBird} />*/}
+                <i className={"fab fa-twitter"}/>
             </Link>
 
             <Link to="/tuiter/home" className="list-group-item text-decoration-none">
