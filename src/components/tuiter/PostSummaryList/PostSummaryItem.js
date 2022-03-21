@@ -1,12 +1,7 @@
-import React, {useEffect,useState} from "react";
+import React from "react";
 import postJson from './posts.json';
-const PostSummaryItem = (props) => {
 
-    const [postArr, setPostarr] = useState([]);
-
-    useEffect(()=>{
-      //  setPostarr(JSON.parse(postJson));
-    },[]);
+const PostSummaryItem = () => {
     return(<>
 
         {postJson.map((postData) => {
