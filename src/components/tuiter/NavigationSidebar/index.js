@@ -7,7 +7,7 @@ import {
     faBell,
     faBookmark, faCommentDots,
     faHashtag,
-    faHome, faKiwiBird,
+    faHome,
     faList,
     faMessage, faUser
 } from "@fortawesome/free-solid-svg-icons";
