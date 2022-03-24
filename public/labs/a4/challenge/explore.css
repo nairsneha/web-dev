@@ -1,0 +1,247 @@
+
+.wd-body {
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 100% !important;
+}
+
+.container {
+    margin: 2px !important;
+}
+
+.wd-div-left-panel {
+    display: inline;
+    padding-right: 12px !important;
+    margin-right: 8px !important;
+}
+
+.wd-div-middle-panel {
+    display: inline;
+    padding-right: 12px !important;
+    margin-right: 0px !important;
+}
+
+.wd-div-right-panel {
+    display: inline;
+    padding-right: 12px !important;
+    margin-right: 8px !important;
+}
+
+.wd-left-panel-item-icon {
+    padding-left: 8px;
+    padding-right: 5px;
+
+}
+
+.wd-left-panel-item-text {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.wd-left-panel-item {
+    color: black !important;
+    padding-top: 10px !important;
+}
+
+.wd-left-panel-tuit-button {
+    border-radius: 25px !important;
+    width: 100%;
+    height: 40px;
+    text-align: center !important;
+}
+
+.wd-row {
+    width: 100% !important;
+}
+
+.wd-top-bar {
+    display: block;
+}
+
+.wd-search-parent {
+    position: relative;
+    float: left;
+    width: 90% !important;
+    margin-right: 12px;
+}
+
+.wd-search-parent .fa-search {
+    position: absolute;
+    margin-left: 1px;
+    margin-top: 8.5px;
+    color: grey;
+    border-color: darkgray !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 10% !important;
+}
+
+.wd-search-tuiter-box {
+    border-radius: 40px;
+    border-color: darkgray !important;
+    border-width: thin;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.wd-selected-item {
+    background-color: dodgerblue !important;
+}
+
+.fa-gear {
+    margin-left: 2px !important;
+    float: right;
+    margin-top: 14px;
+    text-decoration: none;
+}
+
+input[type="text"]::placeholder {
+    padding-left: 40px !important;
+    font-size: 14px !important;
+    font-weight: normal;
+}
+
+.wd-explore-post-image {
+    margin-top: 12px;
+    width: 100%;
+    height: 500px;
+}
+
+.wd-search-bar {
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border-width: thin;
+}
+
+.wd-right-panel-primary-card {
+    border-radius: 0px !important;
+    height: 30px;
+}
+
+.wd-right-panel-primary-card-text {
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: bold;
+    padding: 0 !important;
+}
+
+.wd-right-panel-card-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.wd-right-panel-card-follow-btn {
+    border-radius: 20px !important;
+    margin-top: 5px;
+    float: left !important;
+}
+
+.wd-right-panel-normal-card {
+    border-radius: 0 !important;
+    height: 60px;
+}
+
+.wd-card-body {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.wd-right-panel-card-name {
+    font-weight: bold;
+}
+
+.wd-right-panel-card-user {
+    color: darkgray;
+}
+
+.wd-right-panel-card-contents {
+    padding: 2px !important;
+}
+
+.wd-image-overlay-container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.wd-image-overlay-left-text{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 40px;
+    float: left;
+}
+
+.wd-grey-color {
+    color: grey;
+}
+
+.card {
+    border-radius: 0 !important;
+}
+
+.card-body{
+
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-right: 0 !important;
+}
+
+.wd-for-you-sub-tuit-img-small-screen{
+    width:60px !important;
+    float: right !important;
+    border-radius: 12px;
+}
+
+.wd-for-you-sub-tuit-img-large-screen{
+    width:80px !important;
+    float: right !important;
+    border-radius: 12px;
+}
+
+.wd-nav-horizontan-bar{
+    border-top: 3px solid;
+    border-radius: 8px;
+}
+
+.wd-bg-dark{
+    background-color: black !important;
+}
+
+.wd-right-pannel-card{
+    height: 80px !important;
+    width: 85% !important;
+
+}
+
+.wd-who-to-follow-card{
+    height: 40px !important;
+    width: 90% !important;
+}
+.wd-rounded-cornor-card{
+    border-radius: 6% !important;
+    margin-top: 8px !important;
+    width: 90%;
+}
+
+.wd-right-pannel-bg-color{
+    background-color: rgb(31,34,36) !important;
+}
+.wd-center-pannel-bordor-color{
+    border-color: rgb(31,34,36) !important;
+}
+
+.wd-center-panel {
+    margin-top: 8px !important;
+}
+
+.col-12 {
+    padding-bottom: 5px;
+}
+
+.nav-item {
+
+}
