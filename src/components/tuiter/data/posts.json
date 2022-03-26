@@ -1,4 +1,5 @@
 [ {
+    "_id": 1,
     "name": "Elon Musk",
     "userName": "elonmusk",
     "time": "2h",
@@ -8,11 +9,15 @@
     "imageCaption" : "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
     "postInfo": "From training to launch to landing, this all access docuseries rides along with crew on first orbital space",
     "postLink" : "netflix.com",
-    "postComments" : "4.2k",
-    "postRetuits" : "3.5k",
-    "postLikes": "37.5k"
+    "postComments" : 3,
+    "postRetuits" : 3,
+    "postLikes": 7,
+    "verified" : true,
+    "liked" : true
+
 },
     {
+        "_id": 2,
         "name": "Grimes",
         "userName": "grimes",
         "time": "2h",
@@ -22,8 +27,10 @@
         "imageCaption" : "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
         "postInfo": "From training to launch to landing, this all access docuseries rides along with crew on first orbital space",
         "postLink" : "netflix.com",
-        "postComments" : "4.2k",
-        "postRetuits" : "3.5k",
-        "postLikes": "37.5k"
+        "postComments" : 7,
+        "postRetuits" : 9,
+        "postLikes": 5,
+        "verified" : true,
+        "liked" : false
     }
 ]

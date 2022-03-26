@@ -1,8 +1,9 @@
 import React from "react";
-import who from './who.json'
 import WhoToFollowListItem from './WhoToFollowListItem.js'
+import {useSelector} from "react-redux";
 
 const WhoToFollowList = () => {
+    const who = useSelector((state) => state.who);
 
     const whoToFollowStyle = {
         backgroundColor: '#222222'
@@ -15,11 +16,11 @@ const WhoToFollowList = () => {
                         </div>
                     </div>
 
-
             <div className="list-group">
                 {who.map((person) => (
                        <WhoToFollowListItem who={person} />
                     ))}
+
              </div>
  </>
 ); }

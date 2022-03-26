@@ -58,10 +58,10 @@ const NavigationSidebar = (props) => {
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Lists</span></a>
 
-            <a className="list-group-item text-decoration-none" href="#">
+            <Link to="/tuiter/profile" className="list-group-item text-decoration-none" style={props.active === "Profile" ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faUser} />
                 &nbsp;&nbsp;<span
-                className="text-white d-none d-lg-inline d-print-block">Profile</span></a>
+                className="text-white d-none d-lg-inline d-print-block">Profile</span></Link>
 
             <a className="list-group-item text-decoration-none" href="#">
                 <FontAwesomeIcon icon={faCommentDots} />

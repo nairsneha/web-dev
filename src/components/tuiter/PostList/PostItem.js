@@ -1,5 +1,7 @@
 import React from "react";
+import TuitStats from './tuit-stats'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {useDispatch} from "react-redux";
 import {
     faArrowUp,
     faCircle,
@@ -7,23 +9,30 @@ import {
     faHeart,
     faLink,
     faMessage,
-    faReply
+    faReply,
+    faClose
 } from "@fortawesome/free-solid-svg-icons";
 
 const PostItem = (props) => {
-
-    const style1={
+    const dispatch = useDispatch();
+    const style1 = {
         //border-color: rgb(34,34,34); border-width: 1px; border-style: solid;
         borderColor: "#222222",
         borderWidth: "1px",
         borderStyle: "solid"
     }
-    const style2={
+    const style2 = {
         // {/*style="border-color: rgb(34,34,34); border-width: 1px; border-style: solid;"*/}
         borderColor: "#222222",
         borderWidth: "1px",
         borderStyle: "solid"
     }
+
+    const deleteTuit = (tuit) => {
+        dispatch({type: 'delete-tuit', tuit})
+    };
+
+
     return(
        <>
            <div className="card bg-black rounded-0 mt-2">
@@ -49,7 +58,9 @@ const PostItem = (props) => {
                        <div className="col-1">
                            <h6 className="text-secondary">
                                {/*<i className="fa-solid fa-ellipsis"></i>*/}
-                               <FontAwesomeIcon icon={faEllipsis}/>
+                               <FontAwesomeIcon icon={faClose} onClick={() =>
+                                   deleteTuit(props.post)}
+                               />
                            </h6>
                        </div>
                    </div>
@@ -96,11 +107,13 @@ const PostItem = (props) => {
 
                        <div className="col-3">
                            {/*<i className="fa-solid fa-heart text-secondary pr-2"></i>*/}
-                           <FontAwesomeIcon icon={faHeart}/>
+                           {/*<FontAwesomeIcon icon={faHeart}/>*/}
+                           <TuitStats tuit={props.post} />
                            &nbsp;
-                           <span className="text-secondary">
+                           {/*<span className="text-secondary">
                         {props.post.postLikes}
                         </span>
+                           */}
                        </div>
 
                        <div className="col-1">

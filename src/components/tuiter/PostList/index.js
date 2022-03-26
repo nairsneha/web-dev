@@ -1,16 +1,26 @@
 import React from "react";
-import posts from "./posts.json"
 import PostItem from "./PostItem.js";
+import {useSelector} from "react-redux";
 
 const PostList = () => {
+    const posts = useSelector(
+        state => state.posts);
+
     return (<>
-            <div className="list-group">
+            {/*<div className="list-group">*/}
+            {/*    {*/}
+            {/*        posts.map((post,index) => {*/}
+            {/*            return(<PostItem key={'post'+index} post={post} />);*/}
+            {/*        })*/}
+            {/*    }*/}
+            {/* </div>*/}
+            <ul className="ttr-tuits list-group">
                 {
-                    posts.map((post,index) => {
-                        return(<PostItem key={'post'+index} post={post} />);
-                    })
+                    posts.map && posts.map(post =>
+                                               <PostItem key={post.id}
+                                                             post={post}/>)
                 }
-             </div>
+            </ul>
         </>
              
 ); }
