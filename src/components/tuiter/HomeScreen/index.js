@@ -1,8 +1,6 @@
 import React from "react";
-import NavigationSidebar from "../NavigationSidebar/index.js";
 import PostList from "../PostList/index.js";
 import WhatsHappening from "./whats-happening";
-import PostSummaryItem from "../PostSummaryList/PostSummaryItem";
 
 const HomeScreen = () => {
     return (<>
@@ -12,7 +10,6 @@ const HomeScreen = () => {
             </div>
         </>
     );
-
 }
 
 export default HomeScreen;

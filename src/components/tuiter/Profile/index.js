@@ -1,73 +1,101 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useSelector} from "react-redux";
 import '../../../vendors/fontawesome/css/font-awesome.min.css';
 import '../../../vendors/fontawesome/css/all.min.css';
-
+import {useDispatch} from "react-redux";
 const Profile = () => {
 
     const profile = useSelector(
         state => state.profile);
     const [tempProfile, setTempProfile] = useState(profile);
+    const dispatch = useDispatch();
 
-
-    const bannerImg={
+    const bannerImg = {
         height:'300px',
         fontSize:'50px',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        overflow: "hidden",
+        marginTop: '5px'
     };
 
+    const textAreaStyle = {
+        backgroundColor: 'black',
+        color: 'white'
+    }
+
     const [isEditProfileOn, setIsEditProfileOn]= useState(false);
+    useEffect(()=>{
+        if(!isEditProfileOn){
+            const action = {
+                type: 'edit-profile',
+                profile:tempProfile
+            };
+            dispatch(action);
+        }
+    },[isEditProfileOn]);
+
+
 
     return(
         <>
             {isEditProfileOn === false && <>
                 <div>
-                <h5 style={{paddingBottom: 5, paddingTop: 5, color:"white", fontWeight: 'bold'}}>{tempProfile.firstName}  {tempProfile.lastName} </h5>
+                <h5 style={{paddingBottom: 5, paddingTop: 5, color:"white", fontWeight: 'bold'}}>{tempProfile.firstName} </h5>
                 <p style={{color: "grey", marginTop: '-18px', marginBottom: '2px'}}> {tempProfile.tuittCount} Tweets</p>
                 </div>
             </>
             }
             {isEditProfileOn === true && <>
                 <div className="row">
-                    <div className="col-3">
-                        <h5 style={{padding: 5,color:"white"}}>Edit Profile</h5>
+                    <div className="col-9">
+                        <i style={{marginRight: '10px', fontWeight: 'bold'}} className={'fa fa-close'}/>
+                        <span style={{padding: 5,color:"white", fontWeight: 'bold', fontSize: '21.28px'}}>Edit Profile</span>
                     </div>
-                    <div className="col-9" >
-                        <button style={{float:"right"}} type="button" className="primary" onClick={() => setIsEditProfileOn(!isEditProfileOn)}> Save </button>
+                    <div className="col-3" >
+                        <button type="button" style={{float: "right", backgroundColor: 'black'}} className="btn btn-primary rounded-pill" onClick={() => setIsEditProfileOn(false)}> Save </button>
                     </div>
                 </div>
             </>
             }
 
-            <div style={bannerImg}>  <img src = {tempProfile.bannerImage}/>
+            <div style={bannerImg}>  <img src = {tempProfile.bannerPicture}/>
             </div>
 
             <img src="https://www.statuspik.com/wp-content/uploads/2020/12/Beautiful-anime-profile-pics.jpg" className="rounded-circle"
-                 alt="Cinque Terre" height='150' width='150' style={{marginTop: '-50px'}} />
+                 alt="Cinque Terre" height='150' width='150' style={{marginTop: '-55px'}} />
             {isEditProfileOn === false && <>
-
-                <button type="button" style={{float: "right", marginTop: "10px", backgroundColor: 'black'}} className="btn btn-primary rounded-pill" onClick={() => setIsEditProfileOn(!isEditProfileOn)}>Edit Profile</button>
-
-                {/*<button className="primary button button-4" onClick={() => setIsEditProfileOn(!isEditProfileOn)}*/}
-
-                {/*        style={{float: "right", marginTop: "10px"}}> Edit profile*/}
-                {/*</button>*/}
+                <button type="button" style={{float: "right", marginTop: "10px", backgroundColor: 'black'}} className="btn btn-primary rounded-pill" onClick={() => setIsEditProfileOn(true)}>Edit Profile</button>
             </>
             }
             {isEditProfileOn === false && <>
                 <h3 style={{
                     color: "white", fontWeight: 'bold', paddingTop: '2px', paddingBottom: '5px'
-                }}> {tempProfile.firstName} {tempProfile.lastName}</h3>
+                }}> {tempProfile.firstName}</h3>
             </>
             }
+
             {isEditProfileOn === true && <>
                 <br />
                 <br />
-                <input type="text" placeholder="name" value={tempProfile.firstName} />
-                <br />
+                <div className="col-xs-4">
+                    <label htmlFor="name" style={{color:"grey"}}>Name:</label>
+
+                    <input className="form-control" id="name"
+                           style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
+                           type="text"
+                           defaultValue={tempProfile.firstName}
+
+                           onChange={(e) =>
+                               setTempProfile({
+                                                  ...profile,
+                                                  firstName: e.target.value
+                                              }) }
+                    />
+                </div>
             </>
             }
+
             {isEditProfileOn === false && <>
                 <p style={{color: "grey", marginTop: '-20px'}}> @{tempProfile.handle}</p>
             </>
@@ -77,12 +105,30 @@ const Profile = () => {
             </>
             }
             {isEditProfileOn === true && <>
-                <input type="textarea" placeholder="Bio" value={tempProfile.bio} />
-                <br/>
+                {/*<input type="textarea"  style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}} placeholder="Bio" defaultValue={tempProfile.bio}*/}
+                {/*       onChange={(e) => setTempProfile({...tempProfile, bio: e.target.value})}/>*/}
+
+
+
+                <div className="col-xs-4">
+                    <label htmlFor="bio" style={{color:"grey"}}>Bio:</label>
+
+                    <input className="form-control" id="bio"
+                           style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
+                           type="text"
+                           defaultValue={tempProfile.bio}
+
+                           onChange={(e) =>
+                               setTempProfile({
+                                                  ...profile,
+                                                  bio: e.target.value
+                                              }) }
+                    />
+                </div>
             </>
             }
             <div className="row">
-                {isEditProfileOn === false && <>
+                { isEditProfileOn === false && <>
                     <div className="col-3">
                         <i className={"fa fa-map-marker"} style={{paddingRight: '6px'}}/>
                         {tempProfile.location}
@@ -90,7 +136,25 @@ const Profile = () => {
                 </>
                 }
                 {isEditProfileOn === true && <>
-                    <input type="location" placeholder="name" value={tempProfile.location} />
+                    {/*<input type="textarea"  style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}} placeholder="location" defaultValue={tempProfile.location}*/}
+                    {/*       onChange={(e) =>*/}
+                    {/*           setTempProfile({...tempProfile, location: e.target.value})}/>*/}
+
+                    <div className="col-xs-4">
+                        <label htmlFor="location" style={{color:"grey"}}>Location:</label>
+
+                        <input className="form-control" id="location"
+                               style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
+                               type="text"
+                               defaultValue={tempProfile.location}
+
+                               onChange={(e) =>
+                                   setTempProfile({
+                                                      ...profile,
+                                                      location: e.target.value
+                                                  }) }
+                        />
+                    </div>
                 </>
                 }
                 {isEditProfileOn === false && <>
@@ -100,8 +164,27 @@ const Profile = () => {
                     </div>
                 </>
                 }
+
                 {isEditProfileOn === true && <>
-                    <input type="text" placeholder="dateOfBirth" value={tempProfile.dateOfBirth} />
+                    {/*<input type="textarea"  style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}} placeholder="dateOfBirth" value={tempProfile.dateOfBirth}*/}
+                    {/*       onChange={(e) =>*/}
+                    {/*    setTempProfile({...tempProfile, dateOfBirth: e.target.value})}/>*/}
+
+                    <div className="col-xs-4">
+                        <label htmlFor="location" style={{color:"grey"}}>Date Of Birth:</label>
+
+                        <input className="form-control" id="location"
+                               style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
+                               type="text"
+                               defaultValue={tempProfile.dateOfBirth}
+
+                               onChange={(e) =>
+                                   setTempProfile({
+                                                      ...profile,
+                                                      dateOfBirth: e.target.value
+                                                  }) }
+                        />
+                    </div>
                 </>
                 }
                 <div className="col-4">

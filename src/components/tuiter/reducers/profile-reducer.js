@@ -3,35 +3,12 @@ import profile from '../data/profile.json'
 
 const ProfileReducer = (state = profile, action) => {
     switch (action.type) {
-        case 'edit-name':
+
+        case 'edit-profile':
             return {
-                ...state,
-                name: action.name,
+           ...action.profile
             };
 
-        case 'edit-location':
-            return {
-                ...state,
-                location: action.location,
-            };
-
-        case 'edit-dateOfBirth':
-            return {
-                ...state,
-                dateOfBirth: action.dateOfBirth,
-            };
-
-        case 'edit-bio':
-            return {
-                ...state,
-                bio: action.bio,
-            };
-
-        case 'edit-website':
-            return {
-                ...state,
-                website: action.website,
-            };
 
 
         default:
