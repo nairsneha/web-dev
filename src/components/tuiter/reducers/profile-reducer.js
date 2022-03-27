@@ -9,9 +9,7 @@ const ProfileReducer = (state = profile, action) => {
            ...action.profile
             };
 
-
-
-        default:
+         default:
             return profile
     }
 

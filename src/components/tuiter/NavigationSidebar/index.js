@@ -2,7 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../../vendors/fontawesome/css/font-awesome.min.css';
 import '../../../vendors/fontawesome/css/all.min.css';
-
+import { useLocation } from 'react-router-dom'
+import {Link} from "react-router-dom";
 import {
     faBell,
     faBookmark, faCommentDots,
@@ -11,7 +12,7 @@ import {
     faList,
     faMessage, faUser
 } from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom";
+
 
 const NavigationSidebar = (props) => {
     const activeColor = {
@@ -20,6 +21,8 @@ const NavigationSidebar = (props) => {
     const inactiveColor = {
         backgroundColor: '#222222'
     }
+    const location = useLocation();
+
 
     return(<>
         <div className="list-group">
@@ -28,12 +31,13 @@ const NavigationSidebar = (props) => {
                 <i className={"fab fa-twitter"}/>
             </Link>
 
-            <Link to="/tuiter/home" className="list-group-item text-decoration-none" style={props.active === "Home" ? activeColor : inactiveColor}>
+
+            <Link to="/tuiter/home" className="list-group-item text-decoration-none" style={location.pathname.toLowerCase().includes("home") | location.pathname.toLowerCase() === "/tuiter/" ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faHome} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Home</span></Link>
 
-            <Link to="/tuiter/explore" className="list-group-item text-decoration-none" style={props.active === "Explore" ? activeColor : inactiveColor}>
+            <Link to="/tuiter/explore" className="list-group-item text-decoration-none" style={location.pathname.toLowerCase().includes("explore") ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faHashtag} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Explore</span></Link>
@@ -58,7 +62,7 @@ const NavigationSidebar = (props) => {
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Lists</span></a>
 
-            <Link to="/tuiter/profile" className="list-group-item text-decoration-none" style={props.active === "Profile" ? activeColor : inactiveColor}>
+            <Link to="/tuiter/profile" className="list-group-item text-decoration-none" style={location.pathname.toLowerCase().includes("profile") ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faUser} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Profile</span></Link>

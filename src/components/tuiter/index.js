@@ -32,4 +32,5 @@ const Tuiter = () => {
 
     );
 };
+
 export default Tuiter;

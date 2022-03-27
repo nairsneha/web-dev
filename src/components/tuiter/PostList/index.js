@@ -7,13 +7,6 @@ const PostList = () => {
         state => state.posts);
 
     return (<>
-            {/*<div className="list-group">*/}
-            {/*    {*/}
-            {/*        posts.map((post,index) => {*/}
-            {/*            return(<PostItem key={'post'+index} post={post} />);*/}
-            {/*        })*/}
-            {/*    }*/}
-            {/* </div>*/}
             <ul className="ttr-tuits list-group">
                 {
                     posts.map && posts.map(post =>

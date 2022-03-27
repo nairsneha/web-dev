@@ -25,16 +25,22 @@ const Profile = () => {
     }
 
     const [isEditProfileOn, setIsEditProfileOn]= useState(false);
+    const [isCrossPressed, setIsCrossPressed]= useState(false);
     useEffect(()=>{
-        if(!isEditProfileOn){
+
+        if(!isEditProfileOn&&!isCrossPressed){
             const action = {
                 type: 'edit-profile',
-                profile:tempProfile
+                profile: tempProfile
             };
             dispatch(action);
         }
-    },[isEditProfileOn]);
 
+        if(!isEditProfileOn&&isCrossPressed){
+            setTempProfile(profile);
+            setIsCrossPressed(false);
+        }
+    },[isEditProfileOn]);
 
 
     return(
@@ -49,7 +55,11 @@ const Profile = () => {
             {isEditProfileOn === true && <>
                 <div className="row">
                     <div className="col-9">
-                        <i style={{marginRight: '10px', fontWeight: 'bold'}} className={'fa fa-close'}/>
+                        <i style={{marginRight: '10px', fontWeight: 'bold'}} className={'fa fa-close'} onClick={() => {
+                            setIsEditProfileOn(false);
+                            setIsCrossPressed(true);
+                        }
+                        }/>
                         <span style={{padding: 5,color:"white", fontWeight: 'bold', fontSize: '21.28px'}}>Edit Profile</span>
                     </div>
                     <div className="col-3" >
@@ -79,7 +89,7 @@ const Profile = () => {
                 <br />
                 <br />
                 <div className="col-xs-4">
-                    <label htmlFor="name" style={{color:"grey"}}>Name:</label>
+                    <label htmlFor="name" style={{color:"grey", marginTop: '4px'}}>Name:</label>
 
                     <input className="form-control" id="name"
                            style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
@@ -105,13 +115,8 @@ const Profile = () => {
             </>
             }
             {isEditProfileOn === true && <>
-                {/*<input type="textarea"  style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}} placeholder="Bio" defaultValue={tempProfile.bio}*/}
-                {/*       onChange={(e) => setTempProfile({...tempProfile, bio: e.target.value})}/>*/}
-
-
-
                 <div className="col-xs-4">
-                    <label htmlFor="bio" style={{color:"grey"}}>Bio:</label>
+                    <label htmlFor="bio" style={{color:"grey", marginTop: '4px'}}>Bio:</label>
 
                     <input className="form-control" id="bio"
                            style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
@@ -136,12 +141,8 @@ const Profile = () => {
                 </>
                 }
                 {isEditProfileOn === true && <>
-                    {/*<input type="textarea"  style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}} placeholder="location" defaultValue={tempProfile.location}*/}
-                    {/*       onChange={(e) =>*/}
-                    {/*           setTempProfile({...tempProfile, location: e.target.value})}/>*/}
-
                     <div className="col-xs-4">
-                        <label htmlFor="location" style={{color:"grey"}}>Location:</label>
+                        <label htmlFor="location" style={{color:"grey", marginTop: '4px'}}>Location:</label>
 
                         <input className="form-control" id="location"
                                style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
@@ -166,12 +167,8 @@ const Profile = () => {
                 }
 
                 {isEditProfileOn === true && <>
-                    {/*<input type="textarea"  style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}} placeholder="dateOfBirth" value={tempProfile.dateOfBirth}*/}
-                    {/*       onChange={(e) =>*/}
-                    {/*    setTempProfile({...tempProfile, dateOfBirth: e.target.value})}/>*/}
-
-                    <div className="col-xs-4">
-                        <label htmlFor="location" style={{color:"grey"}}>Date Of Birth:</label>
+                        <div className="col-xs-4">
+                        <label htmlFor="location" style={{color:"grey", marginTop: '4px'}}>Date Of Birth:</label>
 
                         <input className="form-control" id="location"
                                style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
@@ -188,14 +185,15 @@ const Profile = () => {
                 </>
                 }
                 <div className="col-4">
+
                     <i className={"fa fa-map-marker"} style={{paddingRight: '6px'}}/>
                     Joined, {tempProfile.dateJoined}
                 </div>
             </div>
 
             <div className="row">
-                <div className="col-3" style={{color:"grey"}}> <span style={{color:"white"}}> {tempProfile.followingCount} <span style={{color: 'rgb(128, 128, 128)'}}> Following </span> </span></div>
-                <div className="col-3" style={{color:"grey"}}> <span style={{color:"white"}}> {tempProfile.followersCount} <span style={{color: 'rgb(128, 128, 128)'}}> Followers </span></span></div>
+                <div className="col-3" style={{color:"grey"}}> <span style={{color:"white", fontWeight: 'bold'}}> {tempProfile.followingCount} <span style={{color: 'rgb(128, 128, 128)'}}> Following </span> </span></div>
+                <div className="col-3" style={{color:"grey"}}> <span style={{color:"white", fontWeight: 'bold'}}> {tempProfile.followersCount} <span style={{color: 'rgb(128, 128, 128)'}}> Followers </span></span></div>
             </div>
         </>
     );
