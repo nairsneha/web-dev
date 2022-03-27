@@ -3,25 +3,28 @@ import {useDispatch, useSelector} from "react-redux";
 import '../../../vendors/fontawesome/css/fontawesome.css';
 import '../../../vendors/fontawesome/css/all.min.css';
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBarChart, faCalendar, faImage, faSmile} from "@fortawesome/free-solid-svg-icons";
 
 const WhatsHappening = () => {
+
     const profilePic = useSelector(
         state => state.profile.profilePicture);
 
     let [whatsHappening, setWhatsHappening]
         = useState('');
+
     const dispatch = useDispatch();
 
     const tuitClickHandler = () => {
+
         dispatch({type: 'create-tuit',
                      tuit: whatsHappening
                  }); }
 
     const style1 = {
         backgroundColor: "black",
+        color: 'white',
         borderBottom: "1px solid rgb(83, 83, 83)"
     }
 
@@ -35,8 +38,8 @@ const WhatsHappening = () => {
                 <form>
                     <div className="form-group">
                         <textarea className="form-control" id="webdev-create-tweet" placeholder=" What's Happening?" rows="3" style={style1}
-    value={whatsHappening}
-    onChange={(event) =>
+                        value={whatsHappening}
+                        onChange={(event) =>
         setWhatsHappening(event.target.value)}
     />
                     </div>

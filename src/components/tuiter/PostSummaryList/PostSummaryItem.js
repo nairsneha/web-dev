@@ -25,7 +25,6 @@ const PostSummaryItem = () => {
                                 <img className="rounded float-right ml-5" src={postData.image} width="80" height="70" />
 
                             </div>
-
                         </div>
                     </div>
                 </div>

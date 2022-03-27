@@ -3,11 +3,14 @@ import {useSelector} from "react-redux";
 import '../../../vendors/fontawesome/css/font-awesome.min.css';
 import '../../../vendors/fontawesome/css/all.min.css';
 import {useDispatch} from "react-redux";
+
 const Profile = () => {
 
     const profile = useSelector(
         state => state.profile);
+
     const [tempProfile, setTempProfile] = useState(profile);
+
     const dispatch = useDispatch();
 
     const bannerImg = {

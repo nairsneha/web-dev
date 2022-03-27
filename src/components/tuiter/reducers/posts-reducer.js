@@ -1,17 +1,22 @@
 import React from "react";
 import posts from "../data/posts.json";
+import profileData from "../data/profile.json"
+
+import {useSelector} from "react-redux";
+
 
 const tuitsReducer = (state = posts, action) => {
+
     switch (action.type) {
         case 'create-tuit':
             const newPost = {
                 _id: (new Date()).getTime() + '',
-                name: "Sneha",
-                userName: "snehanair",
+                name: profileData.firstName,
+                userName: profileData.handle,
                 time:" just now",
-                imageIcon: "https://media.wired.com/photos/5bae7a3f6278de2d2123479b/1:1/w_1665,h_1665,c_limit/ElonMusk_18261092524731.jpg",
-                image: "https://www.w3schools.com/bootstrap4/cinqueterre.jpg",
-                title: "Creating new tuit",
+                imageIcon: profileData.profilePicture,
+                image: "",
+                title: "",
                 postInfo: action.tuit,
                 postComments : 2,
                 postRetuits : 5,
@@ -46,8 +51,7 @@ const tuitsReducer = (state = posts, action) => {
             return state.filter(
                 tuit => tuit._id !== action.tuit._id);
 
-
-        default:
+         default:
             return posts
     }
 

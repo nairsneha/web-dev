@@ -1,5 +1,5 @@
 import React from "react";
-import profile from '../data/profile.json'
+import profile from '../data/profile.json';
 
 const ProfileReducer = (state = profile, action) => {
     switch (action.type) {

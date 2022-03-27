@@ -1,7 +1,7 @@
 import React from "react";
 import TuitStats from './tuit-stats'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {
     faArrowUp,
     faCircle,
@@ -15,6 +15,7 @@ import {
 
 const PostItem = (props) => {
     const dispatch = useDispatch();
+
     const style1 = {
         //border-color: rgb(34,34,34); border-width: 1px; border-style: solid;
         borderColor: "#222222",
@@ -78,7 +79,7 @@ const PostItem = (props) => {
                            <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
                            {/*<i className="fa-solid fa-link pl-2"></i>*/}
                            <FontAwesomeIcon icon={faLink}/>
-                           <span className="text-secondary pl-2">netflix.com</span>
+                           <span className="text-secondary pl-2">link.com</span>
                        </div>
 
                    </div>

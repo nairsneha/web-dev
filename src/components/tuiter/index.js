@@ -12,6 +12,7 @@ const reducer = combineReducers({
                                     posts: tuitsReducer, who: whoReducer,
                                     profile: ProfileReducer
                                 });
+
 const store = createStore(reducer);
 
 const Tuiter = () => {
