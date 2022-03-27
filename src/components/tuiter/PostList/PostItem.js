@@ -17,13 +17,11 @@ const PostItem = (props) => {
     const dispatch = useDispatch();
 
     const style1 = {
-        //border-color: rgb(34,34,34); border-width: 1px; border-style: solid;
         borderColor: "#222222",
         borderWidth: "1px",
         borderStyle: "solid"
     }
     const style2 = {
-        // {/*style="border-color: rgb(34,34,34); border-width: 1px; border-style: solid;"*/}
         borderColor: "#222222",
         borderWidth: "1px",
         borderStyle: "solid"
@@ -48,7 +46,6 @@ const PostItem = (props) => {
                        </div>
                        <div className="col-9">
                            <h6 className="text-white">{props.post.name}
-                               {/*<i className="fa-solid fa-circle-check text-white"></i> */}
                                <FontAwesomeIcon icon={faCircle}/>
                                <span
                                    className="text-secondary">&nbsp; @{props.post.userName}</span><span
@@ -58,7 +55,6 @@ const PostItem = (props) => {
                        </div>
                        <div className="col-1">
                            <h6 className="text-secondary">
-                               {/*<i className="fa-solid fa-ellipsis"></i>*/}
                                <FontAwesomeIcon icon={faClose} onClick={() =>
                                    deleteTuit(props.post)}
                                />
@@ -66,30 +62,73 @@ const PostItem = (props) => {
                        </div>
                    </div>
 
-                   <div className="row">
+                   {props.post.image !== "" ? <div className="row">
 
                        <div className="col-2">
                        </div>
 
-                       {/*style="border-color: rgb(34,34,34); border-width: 1px; border-style: solid;"*/}
+
                        <div className="col-10 rounded-3 pl-0 pr-0" style={style1}>
-                           {/*style="border-color: rgb(34,34,34); border-width: 1px; border-style: solid;"*/}
                            <img className="w-100" style={style2} src={props.post.image}/>
                            <div className="text-white p-2">{props.post.imageCaption}</div>
+
                            <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
-                           {/*<i className="fa-solid fa-link pl-2"></i>*/}
                            <FontAwesomeIcon icon={faLink}/>
                            <span className="text-secondary pl-2">link.com</span>
                        </div>
 
+
+                   </div> : <div className="row">
+
+                                                <div className="col-2">
+                                                </div>
+
+                                                <div className="col-10 rounded-3 pl-0 pr-0">
+                                                    <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
+                                                </div>
+
+
+                                            </div>
+
+                   }
+
+                   {props.post.video !== "" ? <div className="row">
+
+                       <div className="col-2">
+                       </div>
+
+
+                       <div className="col-10 rounded-3 pl-0 pr-0" style={style1}>
+                           <div className="video-responsive">
+                               <iframe
+                                   src={`https://www.youtube.com/embed/${props.post.video}`}
+                                   width = "100%"
+                                   height = "300px"
+                                   frameBorder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowFullScreen
+                                   title="Embedded youtube"
+                               />
+                           </div>
+                           <div className="text-white p-2">{props.post.videoCaption}</div>
+
+                           <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
+                           <FontAwesomeIcon icon={faLink}/>
+                           <span className="text-secondary pl-2">link.com</span>
+                       </div>
+
+
                    </div>
+                                            : ""
+                   }
+
+
 
                    <div className="row pt-3">
                        <div className="col-2">
                        </div>
 
                        <div className="col-3">
-                           {/*<i className="fa-solid fa-message text-secondary pr-2"></i>*/}
                            <FontAwesomeIcon icon={faMessage}/>
                            &nbsp;
                            <span className="text-secondary">

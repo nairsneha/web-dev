@@ -117,6 +117,7 @@ const Profile = () => {
                 <h6>{tempProfile.bio}</h6>
             </>
             }
+
             {isEditProfileOn === true && <>
                 <div className="col-xs-4">
                     <label htmlFor="bio" style={{color:"grey", marginTop: '4px'}}>Bio:</label>
@@ -135,6 +136,36 @@ const Profile = () => {
                 </div>
             </>
             }
+
+
+
+            {isEditProfileOn === false && <>
+                <h6 style={{
+                    color: "white", fontWeight: 'bold', paddingTop: '2px', paddingBottom: '5px'
+                }}> {tempProfile.website}</h6>
+            </>
+            }
+
+            {isEditProfileOn === true && <>
+                <div className="col-xs-4">
+                    <label htmlFor="website" style={{color:"grey", marginTop: '4px'}}>Website:</label>
+
+                    <input className="form-control" id="website"
+                           style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
+                           type="text"
+                           defaultValue={tempProfile.website}
+
+                           onChange={(e) =>
+                               setTempProfile({
+                                                  ...profile,
+                                                  website: e.target.value
+                                              }) }
+                    />
+                </div>
+            </>
+            }
+
+
             <div className="row">
                 { isEditProfileOn === false && <>
                     <div className="col-3">
@@ -171,11 +202,10 @@ const Profile = () => {
 
                 {isEditProfileOn === true && <>
                         <div className="col-xs-4">
-                        <label htmlFor="location" style={{color:"grey", marginTop: '4px'}}>Date Of Birth:</label>
+                        <label htmlFor="dateOfBirth" style={{color:"grey", marginTop: '4px'}}>Date Of Birth:</label>
 
-                        <input className="form-control" id="location"
+                        <input type = "date" className="form-control" id="dateOfBirth"
                                style={{backgroundColor: 'black', color: 'white', borderColor: 'gray', borderWidth: '2px'}}
-                               type="text"
                                defaultValue={tempProfile.dateOfBirth}
 
                                onChange={(e) =>
@@ -184,10 +214,12 @@ const Profile = () => {
                                                       dateOfBirth: e.target.value
                                                   }) }
                         />
+
                     </div>
                 </>
                 }
-                <div className="col-4">
+
+    <div className="col-4">
 
                     <i className={"fa fa-map-marker"} style={{paddingRight: '6px'}}/>
                     Joined, {tempProfile.dateJoined}
