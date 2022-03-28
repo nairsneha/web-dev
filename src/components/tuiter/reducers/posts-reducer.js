@@ -2,9 +2,6 @@ import React from "react";
 import posts from "../data/posts.json";
 import profileData from "../data/profile.json"
 
-import {useSelector} from "react-redux";
-
-
 const tuitsReducer = (state = posts, action) => {
 
     switch (action.type) {

@@ -101,7 +101,7 @@ const Profile = () => {
 
                            onChange={(e) =>
                                setTempProfile({
-                                                  ...profile,
+                                                  ...tempProfile,
                                                   firstName: e.target.value
                                               }) }
                     />
@@ -129,7 +129,7 @@ const Profile = () => {
 
                            onChange={(e) =>
                                setTempProfile({
-                                                  ...profile,
+                                                  ...tempProfile,
                                                   bio: e.target.value
                                               }) }
                     />
@@ -157,7 +157,7 @@ const Profile = () => {
 
                            onChange={(e) =>
                                setTempProfile({
-                                                  ...profile,
+                                                  ...tempProfile,
                                                   website: e.target.value
                                               }) }
                     />
@@ -185,7 +185,7 @@ const Profile = () => {
 
                                onChange={(e) =>
                                    setTempProfile({
-                                                      ...profile,
+                                                      ...tempProfile,
                                                       location: e.target.value
                                                   }) }
                         />
@@ -210,7 +210,7 @@ const Profile = () => {
 
                                onChange={(e) =>
                                    setTempProfile({
-                                                      ...profile,
+                                                      ...tempProfile,
                                                       dateOfBirth: e.target.value
                                                   }) }
                         />
