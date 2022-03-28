@@ -17,7 +17,7 @@ const tuitsReducer = (state = posts, action) => {
                 imageIcon: profileData.profilePicture,
                 image: "",
                 video: "",
-                title: "creating new tuit",
+                title: "This is the title of the new tuit",
                 postInfo: action.tuit,
                 postComments : 2,
                 postRetuits : 5,
