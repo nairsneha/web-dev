@@ -32,7 +32,7 @@ const NavigationSidebar = (props) => {
             </Link>
 
 
-            <Link to="/tuiter/home" className="list-group-item text-decoration-none" style={location.pathname.toLowerCase().includes("home") | location.pathname.toLowerCase() === "/tuiter/" ? activeColor : inactiveColor}>
+            <Link to="/tuiter/home" className="list-group-item text-decoration-none" style={location.pathname.toLowerCase().includes("home") || location.pathname.toLowerCase() === "/tuiter/" || location.pathname.toLowerCase() === "/tuiter" ? activeColor : inactiveColor}>
                 <FontAwesomeIcon icon={faHome} />
                 &nbsp;&nbsp;<span
                 className="text-white d-none d-lg-inline d-print-block">Home</span></Link>

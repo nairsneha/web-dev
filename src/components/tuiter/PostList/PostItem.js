@@ -5,8 +5,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {
     faArrowUp,
     faCircle,
-    faEllipsis,
-    faHeart,
     faLink,
     faMessage,
     faReply,
@@ -16,12 +14,7 @@ import {
 const PostItem = (props) => {
     const dispatch = useDispatch();
 
-    const style1 = {
-        borderColor: "#222222",
-        borderWidth: "1px",
-        borderStyle: "solid"
-    }
-    const style2 = {
+    const imageStyle = {
         borderColor: "#222222",
         borderWidth: "1px",
         borderStyle: "solid"
@@ -68,8 +61,8 @@ const PostItem = (props) => {
                        </div>
 
 
-                       <div className="col-10 rounded-3 pl-0 pr-0" style={style1}>
-                           <img className="w-100" style={style2} src={props.post.image}/>
+                       <div className="col-10 rounded-3 pl-0 pr-0" style={imageStyle}>
+                           <img className="w-100" style={imageStyle} src={props.post.image}/>
                            <div className="text-white p-2">{props.post.imageCaption}</div>
 
                            <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
@@ -98,7 +91,7 @@ const PostItem = (props) => {
                        </div>
 
 
-                       <div className="col-10 rounded-3 pl-0 pr-0" style={style1}>
+                       <div className="col-10 rounded-3 pl-0 pr-0" style={imageStyle}>
                            <div className="video-responsive">
                                <iframe
                                    src={`https://www.youtube.com/embed/${props.post.video}`}
@@ -130,40 +123,35 @@ const PostItem = (props) => {
 
                        <div className="col-3">
                            <FontAwesomeIcon icon={faMessage}/>
-                           &nbsp;
+                           &nbsp;&nbsp;
                            <span className="text-secondary">
                         {props.post.postComments}
                         </span>
                        </div>
 
                        <div className="col-3">
-                           {/*<i className="fa-solid fa-retweet text-secondary pr-2"></i>*/}
                            <FontAwesomeIcon icon={faReply}/>
-                           &nbsp;
+                           &nbsp;&nbsp;
                            <span className="text-secondary">
                         {props.post.postRetuits}
                         </span>
                        </div>
 
                        <div className="col-3">
-                           {/*<i className="fa-solid fa-heart text-secondary pr-2"></i>*/}
-                           {/*<FontAwesomeIcon icon={faHeart}/>*/}
                            <TuitStats tuit={props.post} />
-                           &nbsp;
-                           {/*<span className="text-secondary">
-                        {props.post.postLikes}
-                        </span>
-                           */}
+                           &nbsp;&nbsp;
                        </div>
 
                        <div className="col-1">
-                           {/*<i className="fa-solid fa-arrow-up-from-bracket text-secondary pr-2"></i>*/}
                            <FontAwesomeIcon icon={faArrowUp}/>
                        </div>
 
                    </div>
+
                </div>
+               <hr/>
            </div>
+
        </>
     );
 }

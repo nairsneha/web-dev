@@ -12,7 +12,9 @@ const PostList = () => {
                     posts.map && posts.map(post =>
                                                <PostItem key={post.id}
                                                              post={post}/>)
+
                 }
+
             </ul>
         </>
              
