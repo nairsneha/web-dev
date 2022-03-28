@@ -38,7 +38,7 @@ const PostItem = (props) => {
 
                        </div>
                        <div className="col-9">
-                           <h6 className="text-white">{props.post.name}
+                           <h6 className="text-white">{props.post.name}&nbsp;
                                <FontAwesomeIcon icon={faCircle}/>
                                <span
                                    className="text-secondary">&nbsp; @{props.post.userName}</span><span
@@ -65,7 +65,7 @@ const PostItem = (props) => {
                            <img className="w-100" style={imageStyle} src={props.post.image}/>
                            <div className="text-white p-2">{props.post.imageCaption}</div>
 
-                           <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
+                           {/*<div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>*/}
                            <FontAwesomeIcon icon={faLink}/>
                            <span className="text-secondary pl-2">link.com</span>
                        </div>
@@ -105,9 +105,9 @@ const PostItem = (props) => {
                            </div>
                            <div className="text-white p-2">{props.post.videoCaption}</div>
 
-                           <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
-                           <FontAwesomeIcon icon={faLink}/>
-                           <span className="text-secondary pl-2">link.com</span>
+                           {/*<div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>*/}
+                           {/*<FontAwesomeIcon icon={faLink}/>*/}
+                           {/*<span className="text-secondary pl-2">link.com</span>*/}
                        </div>
 
 
