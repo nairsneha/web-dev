@@ -23,11 +23,6 @@ const PostItem = (props) => {
         borderStyle: "solid"
     }
 
-    const deleteTuit = (tuit) => {
-        dispatch({type: 'delete-tuit', tuit})
-    };
-
-
     return(
        <>
            <div className="card bg-black rounded-0 mt-2">
@@ -51,9 +46,9 @@ const PostItem = (props) => {
                        </div>
                        <div className="col-1">
                            <h6 className="text-secondary">
-                               {/*<FontAwesomeIcon icon={faClose} onClick={() => deleteTuit(*/}
-                               {/*    dispatch, props.tuit)}*/}
-                               {/*/>*/}
+                               <FontAwesomeIcon icon={faClose} onClick={() => deleteTuit(
+                                   dispatch, props.tuit)}
+                               />
                            </h6>
                        </div>
                    </div>

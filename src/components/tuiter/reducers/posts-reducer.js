@@ -1,7 +1,7 @@
 import React from "react";
 import posts from "../data/posts.json";
 import profileData from "../data/profile.json"
-import {FIND_ALL_TUITS}
+import {FIND_ALL_TUITS,  CREATE_TUIT}
     from "../../../actions/tuits-actions";
 
 const tuitsReducer = (state = posts, action) => {
@@ -53,7 +53,13 @@ const tuitsReducer = (state = posts, action) => {
         case FIND_ALL_TUITS:
             return action.tuits;
 
-         default:
+        case CREATE_TUIT:
+            return [
+                ...state,
+                action.newTuit
+            ];
+
+        default:
             return posts
     }
 
