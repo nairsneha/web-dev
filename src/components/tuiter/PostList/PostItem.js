@@ -2,6 +2,9 @@ import React from "react";
 import TuitStats from './tuit-stats'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useDispatch, useSelector} from "react-redux";
+import {deleteTuit, findAllTuits}
+    from "../../../actions/tuits-actions";
+
 import {
     faArrowUp,
     faCircle,
@@ -33,37 +36,37 @@ const PostItem = (props) => {
                    <div className="row">
                        <div className="col-2">
 
-                           <img className="rounded-circle float-right ml-5 mb-2" src={props.post.imageIcon}
+                           <img className="rounded-circle float-right ml-5 mb-2" src={props.tuit.imageIcon}
                                 width="60" height="60"/>
 
                        </div>
                        <div className="col-9">
-                           <h6 className="text-white">{props.post.name}&nbsp;
+                           <h6 className="text-white">{props.tuit.name}&nbsp;
                                <FontAwesomeIcon icon={faCircle}/>
                                <span
-                                   className="text-secondary">&nbsp; @{props.post.userName}</span><span
-                                   className="text-secondary"> &middot; {props.post.time}</span></h6>
+                                   className="text-secondary">&nbsp; @{props.tuit.userName}</span><span
+                                   className="text-secondary"> &middot; {props.tuit.time}</span></h6>
 
-                           <div className="text-white pr-4" dangerouslySetInnerHTML={{ __html:props.post.title}} />
+                           <div className="text-white pr-4" dangerouslySetInnerHTML={{ __html:props.tuit.title}} />
                        </div>
                        <div className="col-1">
                            <h6 className="text-secondary">
-                               <FontAwesomeIcon icon={faClose} onClick={() =>
-                                   deleteTuit(props.post)}
-                               />
+                               {/*<FontAwesomeIcon icon={faClose} onClick={() => deleteTuit(*/}
+                               {/*    dispatch, props.tuit)}*/}
+                               {/*/>*/}
                            </h6>
                        </div>
                    </div>
 
-                   {props.post.image !== "" ? <div className="row">
+                   {props.tuit.image !== "" ? <div className="row">
 
                        <div className="col-2">
                        </div>
 
 
                        <div className="col-10 rounded-3 pl-0 pr-0" style={imageStyle}>
-                           <img className="w-100" style={imageStyle} src={props.post.image}/>
-                           <div className="text-white p-2">{props.post.imageCaption}</div>
+                           <img className="w-100" style={imageStyle} src={props.tuit.image}/>
+                           <div className="text-white p-2">{props.tuit.imageCaption}</div>
 
                            {/*<div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>*/}
                            <FontAwesomeIcon icon={faLink}/>
@@ -77,7 +80,7 @@ const PostItem = (props) => {
                                                 </div>
 
                                                 <div className="col-10 rounded-3 pl-0 pr-0">
-                                                    <div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>
+                                                    <div className="text-secondary pl-2 pr-2">{props.tuit.postInfo}</div>
                                                 </div>
 
 
@@ -85,7 +88,7 @@ const PostItem = (props) => {
 
                    }
 
-                   {props.post.video !== "" ? <div className="row">
+                   {props.tuit.video !== "" ? <div className="row">
 
                        <div className="col-2">
                        </div>
@@ -94,7 +97,7 @@ const PostItem = (props) => {
                        <div className="col-10 rounded-3 pl-0 pr-0" style={imageStyle}>
                            <div className="video-responsive">
                                <iframe
-                                   src={`https://www.youtube.com/embed/${props.post.video}`}
+                                   src={`https://www.youtube.com/embed/${props.tuit.video}`}
                                    width = "100%"
                                    height = "300px"
                                    frameBorder="0"
@@ -103,11 +106,8 @@ const PostItem = (props) => {
                                    title="Embedded youtube"
                                />
                            </div>
-                           <div className="text-white p-2">{props.post.videoCaption}</div>
+                           <div className="text-white p-2">{props.tuit.videoCaption}</div>
 
-                           {/*<div className="text-secondary pl-2 pr-2">{props.post.postInfo}</div>*/}
-                           {/*<FontAwesomeIcon icon={faLink}/>*/}
-                           {/*<span className="text-secondary pl-2">link.com</span>*/}
                        </div>
 
 
@@ -125,7 +125,7 @@ const PostItem = (props) => {
                            <FontAwesomeIcon icon={faMessage}/>
                            &nbsp;&nbsp;
                            <span className="text-secondary">
-                        {props.post.postComments}
+                        {props.tuit.postComments}
                         </span>
                        </div>
 
@@ -133,12 +133,12 @@ const PostItem = (props) => {
                            <FontAwesomeIcon icon={faReply}/>
                            &nbsp;&nbsp;
                            <span className="text-secondary">
-                        {props.post.postRetuits}
+                        {props.tuit.postRetuits}
                         </span>
                        </div>
 
                        <div className="col-3">
-                           <TuitStats tuit={props.post} />
+                           <TuitStats tuit={props.tuit} />
                            &nbsp;&nbsp;
                        </div>
 

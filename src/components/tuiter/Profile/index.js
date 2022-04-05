@@ -29,9 +29,10 @@ const Profile = () => {
 
     const [isEditProfileOn, setIsEditProfileOn]= useState(false);
     const [isCrossPressed, setIsCrossPressed]= useState(false);
-    useEffect(()=>{
 
-        if(!isEditProfileOn&&!isCrossPressed){
+    useEffect(() => {
+
+        if(!isEditProfileOn&&!isCrossPressed) {
             const action = {
                 type: 'edit-profile',
                 profile: tempProfile
@@ -39,7 +40,7 @@ const Profile = () => {
             dispatch(action);
         }
 
-        if(!isEditProfileOn&&isCrossPressed){
+        if(!isEditProfileOn&&isCrossPressed) {
             setTempProfile(profile);
             setIsCrossPressed(false);
         }

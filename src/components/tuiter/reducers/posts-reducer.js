@@ -1,6 +1,8 @@
 import React from "react";
 import posts from "../data/posts.json";
 import profileData from "../data/profile.json"
+import {FIND_ALL_TUITS}
+    from "../../../actions/tuits-actions";
 
 const tuitsReducer = (state = posts, action) => {
 
@@ -23,8 +25,7 @@ const tuitsReducer = (state = posts, action) => {
 
             }
 
-
-            return [
+             return [
                 newPost,
                 ...state,
             ];
@@ -45,9 +46,12 @@ const tuitsReducer = (state = posts, action) => {
                 }
             });
 
-        case 'delete-tuit':
+        case 'DELETE_TUIT':
             return state.filter(
                 tuit => tuit._id !== action.tuit._id);
+
+        case FIND_ALL_TUITS:
+            return action.tuits;
 
          default:
             return posts
