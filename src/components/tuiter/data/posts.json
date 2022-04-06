@@ -12,8 +12,10 @@
     "postComments" : 3,
     "postRetuits" : 3,
     "postLikes": 7,
+    "postDislikes" : 0,
     "verified" : true,
-    "liked" : true
+    "liked" : true,
+    "disliked" : false
 
 },
     {
@@ -31,8 +33,10 @@
         "postComments" : 7,
         "postRetuits" : 9,
         "postLikes": 5,
+        "postDislikes" : 0,
         "verified" : true,
-        "liked" : false
+        "liked" : false,
+        "disliked" : false
     },
     {
         "_id": 4,
@@ -49,8 +53,10 @@
         "postComments" : 3,
         "postRetuits" : 3,
         "postLikes": 7,
+        "postDislikes" : 0,
         "verified" : true,
-        "liked" : true
+        "liked" : true,
+        "disliked" : false
 
     }
 ]

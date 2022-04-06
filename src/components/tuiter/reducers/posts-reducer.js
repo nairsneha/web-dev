@@ -1,14 +1,16 @@
 import React from "react";
 import posts from "../data/posts.json";
 import profileData from "../data/profile.json"
-import {FIND_ALL_TUITS,  CREATE_TUIT}
+import {FIND_ALL_TUITS,  CREATE_TUIT, UPDATE_TUIT,
+}
     from "../../../actions/tuits-actions";
 
 const tuitsReducer = (state = posts, action) => {
 
     switch (action.type) {
+
         case 'create-tuit':
-            const newPost = {
+          /*  const newPost = {
                 _id: (new Date()).getTime() + '',
                 name: profileData.firstName,
                 userName: profileData.handle,
@@ -23,12 +25,10 @@ const tuitsReducer = (state = posts, action) => {
                 postLikes: 4,
                 verified : true
 
-            }
-
-             return [
-                newPost,
-                ...state,
-            ];
+            }*/
+          //   console.log('action.newTuit: '+action.newTuit)
+          //  console.log([action.newTuit].concat(state))
+             return [action.newTuit].concat(state);
 
         case 'like-tuit':
             return state.map(tuit => {
@@ -39,6 +39,22 @@ const tuitsReducer = (state = posts, action) => {
                     } else {
                         tuit.liked = true;
                         tuit.postLikes++;
+                    }
+                    return tuit;
+                } else {
+                    return tuit;
+                }
+            });
+
+        case 'dislike-tuit':
+            return state.map(tuit => {
+                if(tuit._id === action.tuit._id) {
+                    if(tuit.disliked === true) {
+                        tuit.disliked = false;
+                        tuit.postDislikes--;
+                    } else {
+                        tuit.disliked = true;
+                        tuit.postDislikes++;
                     }
                     return tuit;
                 } else {
@@ -58,6 +74,11 @@ const tuitsReducer = (state = posts, action) => {
                 ...state,
                 action.newTuit
             ];
+
+        case UPDATE_TUIT:
+            return state.map(
+                tuit => tuit._id === action.tuit._id ?
+                        action.tuit : tuit);
 
         default:
             return posts

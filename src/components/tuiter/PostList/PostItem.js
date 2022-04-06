@@ -1,5 +1,6 @@
 import React from "react";
 import TuitStats from './tuit-stats'
+import TuitDislike from "./tuit-dislike";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useDispatch, useSelector} from "react-redux";
 import {deleteTuit, findAllTuits}
@@ -116,7 +117,7 @@ const PostItem = (props) => {
                        <div className="col-2">
                        </div>
 
-                       <div className="col-3">
+                       <div className="col-2">
                            <FontAwesomeIcon icon={faMessage}/>
                            &nbsp;&nbsp;
                            <span className="text-secondary">
@@ -124,7 +125,7 @@ const PostItem = (props) => {
                         </span>
                        </div>
 
-                       <div className="col-3">
+                       <div className="col-2">
                            <FontAwesomeIcon icon={faReply}/>
                            &nbsp;&nbsp;
                            <span className="text-secondary">
@@ -132,8 +133,13 @@ const PostItem = (props) => {
                         </span>
                        </div>
 
-                       <div className="col-3">
+                       <div className="col-2">
                            <TuitStats tuit={props.tuit} />
+                           &nbsp;&nbsp;
+                       </div>
+
+                       <div className="col-2">
+                           <TuitDislike tuit={props.tuit} />
                            &nbsp;&nbsp;
                        </div>
 
