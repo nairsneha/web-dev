@@ -1,10 +1,6 @@
 import React from "react";
+import ReduxExamples from "./redux-examples";
 import {Link} from "react-router-dom";
-import Classes from "./classes";
-import Styles from "./styles";
-import ConditionalOutput from "./conditional-output";
-import TodoItem from "./todo/toDoItem";
-import TodoList from "./todo/toDoList";
 
 const Labs = () => {
     return(
@@ -16,11 +12,7 @@ const Labs = () => {
             <Link to="/tuiter">
                 Tuiter
             </Link>
-            <TodoList/>
-            <ConditionalOutput/>
-            <Styles/>
-            <Classes/>
-
+            <ReduxExamples/>
         </>)
 };
 

@@ -1,53 +1,37 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import NavigationSidebar from "./NavigationSidebar";
-import WhoToFollowListItem from "./WhoToFollowList/WhoToFollowListItem";
-//import ExploreComponent from "./ExploreScreen/ExploreComponent";
-import ExploreScreen from "./ExploreScreen/ExploreScreen";
-import Index from "./HomeScreen";
+import WhoToFollowList from "./WhoToFollowList";
+import whoReducer from "./reducers/who-reducer";
+import tuitsReducer from "./reducers/posts-reducer";
+import ProfileReducer from "./reducers/profile-reducer"
+import {combineReducers, createStore} from "redux";
+import {Provider} from "react-redux";
+
+const reducer = combineReducers({
+                                    posts: tuitsReducer, who: whoReducer,
+                                    profile: ProfileReducer
+                                });
+
+const store = createStore(reducer);
+
 const Tuiter = () => {
-    return(
-        <>
-            {/*<div className="container-fluid">*/}
-
-            {/*    <div className="row pl-2 pr-2">*/}
-
-            {/*        <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2 pr-0 mt-2">*/}
-            {/*/!*<h1>Tuiter</h1>*!/*/}
-            {/*/!*<Link to="/hello">*!/*/}
-            {/*/!*    Hello*!/*/}
-            {/*/!*</Link> |*!/*/}
-            {/*/!*<Link to="/">*!/*/}
-            {/*/!*    Labs*!/*/}
-            {/*/!*</Link>*!/*/}
-            {/*<NavigationSidebar active="home"/>*/}
-
-            {/*        </div>*/}
-
-
-            {/*        <div className="col-xl-3 col-lg-3 pr-4 mb-2 mt-2 d-none d-lg-block">*/}
-            {/*            <WhoToFollowListItem who={{*/}
-            {/*                avatarIcon: "https://storage.googleapis.com/webdesignledger.pub.network/WDL/12f213e1-t1.jpg",*/}
-            {/*                userName: "Virgin Galactic",*/}
-            {/*                handle: "virgingalactic",*/}
-            {/*            }*/}
-            {/*            }/>*/}
-
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
-            {/*<BrowserRouter>
-                <div className="container">
-                    <Routes>
-
-                    </Routes>
+    return (
+        <Provider store={store}>
+            <div className="row mt-2">
+                <div className="col-2 col-lg-1 col-xl-2">
+                    <NavigationSidebar/>
                 </div>
-            </BrowserRouter>*/}
-        </>
+                <div className="col-10 col-lg-7 col-xl-6">
+                    <Outlet/>
+                </div>
+                <div className="d-none d-lg-block col-lg-4 col-xl-4">
+                    <WhoToFollowList/>
+                </div>
+            </div>
+        </Provider>
 
-    )
+    );
 };
-
 
 export default Tuiter;
